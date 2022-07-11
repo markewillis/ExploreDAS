@@ -1,4 +1,4 @@
-# ExploreDAS-Release_1
+# ExploreDAS
 
  Model building, forward modeling, and imaging of DAS data for the SEG DISC 2022 course by Mark E. Willis.
 
