@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="3819334467" file="/Users/markwillis/Documents/GitHub/ExploreDAS/ExploreDAS.prj" location="/Users/markwillis/Documents/GitHub/ExploreDAS" name="ExploreDAS" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="3444703864" file="/Users/markwillis/Documents/GitHub/ExploreDAS/ExploreDAS.prj" location="/Users/markwillis/Documents/GitHub/ExploreDAS" name="ExploreDAS" target="target.mlapps" target-name="Package App">
     <param.appname>ExploreDAS</param.appname>
     <param.authnamewatermark>Mark E. Willis</param.authnamewatermark>
     <param.email>mark_e_willis@hotmail.com</param.email>
