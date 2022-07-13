@@ -37,13 +37,13 @@ global XDAS
 
 dirDefault = createDefaultSaveDir();
 
-[path] = uigetdir(dirDefault,'Select Folder Name for Saving Shots');
-if isequal(path,0)
+[tpath] = uigetdir(dirDefault,'Select Folder Name for Saving Shots');
+if isequal(tpath,0)
    return
 else
 end
 
-title(XDAS.h.axes_model,['Exporting Shots in SEGY Format To Disk in directory ' path])
+title(XDAS.h.axes_model,['Exporting Shots in SEGY Format To Disk in directory ' tpath])
 drawnow
 
 % set up information about the desired shot shot record
@@ -69,9 +69,9 @@ for ishot = 1:get(XDAS.obj.sources,'nsource')
     
     % create the file name into which to export the shot data
     fnameRef   = ['shot_' num2str(ishot) '_Ref_Record.sgy'];
-    fnoutRef   = fullfile(path,fnameRef);
+    fnoutRef   = fullfile(tpath,fnameRef);
     fnameOther = ['shot_' num2str(ishot) '_Other_Record.sgy'];
-    fnoutOther = fullfile(path,fnameOther);
+    fnoutOther = fullfile(tpath,fnameOther);
     
     % save the shot record to disk in SEGY format
     [fail] = thisShotRecord.saveToSEGY(fnoutRef,fnoutOther,plotRecordOptions);

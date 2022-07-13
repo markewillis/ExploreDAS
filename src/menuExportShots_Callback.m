@@ -38,13 +38,13 @@ global XDAS
 
 dirDefault = createDefaultSaveDir();
 
-[path] = uigetdir(dirDefault,'Select Folder Name for Saving Shots');
-if isequal(path,0)
+[tpath] = uigetdir(dirDefault,'Select Folder Name for Saving Shots');
+if isequal(tpath,0)
    %disp('User selected Cancel')
    return
 end
 
-title(XDAS.h.axes_model,['Exporting Shots To Disk in directory ' path])
+title(XDAS.h.axes_model,['Exporting Shots To Disk in directory ' tpath])
 drawnow
 
 % create a new structure to hold all of the objects and parameters
@@ -56,7 +56,7 @@ EDAS.reflectors = XDAS.obj.reflectors;
 
 % save the model information in a new file
 fname = ['modelData.mat'];
-fnout   = fullfile(path,fname);
+fnout   = fullfile(tpath,fname);
 save(fnout,'EDAS')
 
 % save each shot record separately
@@ -70,7 +70,7 @@ for ishot = 1:get(XDAS.obj.sources,'nsource')
     
     % create the file name into which to export the shot data
     fname = ['shot_' num2str(ishot) '_Record.mat'];
-    fnout   = fullfile(path,fname);
+    fnout   = fullfile(tpath,fname);
     
     % save the shot record to disk
     [fail] = thisShotRecord.saveToDisk(fnout);

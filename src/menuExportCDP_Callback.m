@@ -38,13 +38,13 @@ global XDAS
 
 dirDefault = createDefaultSaveDir();
 
-[path] = uigetdir(dirDefault,'Select Folder Name for Saving CDP Data');
-if isequal(path,0)
+[tpath] = uigetdir(dirDefault,'Select Folder Name for Saving CDP Data');
+if isequal(tpath,0)
    %disp('User selected Cancel')
    return
 end
 
-title(XDAS.h.axes_model,['Exporting Migrated CDP Results To Disk in directory ' path])
+title(XDAS.h.axes_model,['Exporting Migrated CDP Results To Disk in directory ' tpath])
 drawnow
 
 % *********************************************************************
@@ -75,7 +75,7 @@ cdpInfo.CMNSNR          = CM.fiber.CMNSNR;
 
 % create the file name into which to export the shot data
 fname = ['migration_CDP.mat'];
-fnout   = fullfile(path,fname);
+fnout   = fullfile(tpath,fname);
 
 save(fnout,'cdpInfo','EDAS')
 

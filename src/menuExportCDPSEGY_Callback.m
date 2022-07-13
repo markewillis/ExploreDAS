@@ -37,21 +37,21 @@ global XDAS
 
 dirDefault = createDefaultSaveDir();
 
-[path] = uigetdir(dirDefault,'Select Folder Name for Saving CDP Data');
-if isequal(path,0)
+[tpath] = uigetdir(dirDefault,'Select Folder Name for Saving CDP Data');
+if isequal(tpath,0)
    return
 end
 
 
-title(XDAS.h.axes_model,['Exporting Migrated CDP Results To Disk in directory ' path])
+title(XDAS.h.axes_model,['Exporting Migrated CDP Results To Disk in directory ' tpath])
 drawnow
 
 % create the file name into which to export the cdp data
 fnameRef = ['migration_CDP_Ref.sgy'];
-fnameRef   = fullfile(path,fnameRef);
+fnameRef   = fullfile(tpath,fnameRef);
 
 fnameOther = ['migration_CDP_Other.sgy'];
-fnameOther   = fullfile(path,fnameOther);
+fnameOther   = fullfile(tpath,fnameOther);
 
 polarity = false;
 

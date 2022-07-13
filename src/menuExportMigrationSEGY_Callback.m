@@ -37,20 +37,20 @@ global XDAS
 
 dirDefault = createDefaultSaveDir();
 
-[path] = uigetdir(dirDefault,'Select Folder Name for Saving Migrated Images');
-if isequal(path,0)
+[tpath] = uigetdir(dirDefault,'Select Folder Name for Saving Migrated Images');
+if isequal(tpath,0)
    return
 end
 
-title(XDAS.h.axes_model,['Exporting Migration Results in SEGY format To Disk in directory ' path])
+title(XDAS.h.axes_model,['Exporting Migration Results in SEGY format To Disk in directory ' tpath])
 drawnow
 
 % create the file name into which to export the migrated images
 filenameRef = ['migratedImage_Ref.sgy'];
-filenameRef = fullfile(path,filenameRef);
+filenameRef = fullfile(tpath,filenameRef);
 
 filenameOther = ['migratedImage_Other.sgy'];
-filenameOther = fullfile(path,filenameOther);
+filenameOther = fullfile(tpath,filenameOther);
 
 polarity = false;
 

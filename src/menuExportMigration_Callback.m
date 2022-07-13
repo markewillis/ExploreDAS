@@ -38,12 +38,12 @@ global XDAS
 
 dirDefault = createDefaultSaveDir();
 
-[path] = uigetdir(dirDefault,'Select Folder Name for Saving Migrated Images');
-if isequal(path,0)
+[tpath] = uigetdir(dirDefault,'Select Folder Name for Saving Migrated Images');
+if isequal(tpath,0)
    return
 end
 
-title(XDAS.h.axes_model,['Exporting Migration Results To Disk in directory ' path])
+title(XDAS.h.axes_model,['Exporting Migration Results To Disk in directory ' tpath])
 drawnow
 
 % *********************************************************************
@@ -74,7 +74,7 @@ migInfo.CMNSNR          = CM.fiber.CMNSNR;
 
 % create the file name into which to export the shot data
 fname = ['migration_Record.mat'];
-fnout   = fullfile(path,fname);
+fnout   = fullfile(tpath,fname);
 
 save(fnout,'migInfo','EDAS')
 
