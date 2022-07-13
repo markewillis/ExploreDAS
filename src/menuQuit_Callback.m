@@ -34,7 +34,7 @@ global XDAS
 
 % delete the classes and source paths from the current matlab session
 if ~XDAS.compile.on
-    rmpath('classes','src');
+    rmpath('classes','src',fullfile('SegyMAT-1.5.1','SegyMAT'));
 end
 
 

@@ -59,7 +59,7 @@ XDAS.compile.title = XDAS.releaseTitle;
 XDAS.compile.on = false;
 
 if ~XDAS.compile.on
-    XDAS.paths.old = addpath('classes','src','SegyMAT-1.5.1');
+    XDAS.paths.old = addpath('classes','src',fullfile('SegyMAT-1.5.1','SegyMAT'));
 end
 
 

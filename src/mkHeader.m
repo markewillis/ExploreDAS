@@ -49,9 +49,12 @@ parameterString = [ parameterString sprintf('%80s',[' sample(end) = ' num2str(ti
 
 parameterString = [ parameterString sprintf('%80s','  ')];
 
+x1 = 1;
+x2 = min(2,length(space));
+
 parameterString = [ parameterString sprintf('%80s','Trace distance increment values ')];
-parameterString = [ parameterString sprintf('%80s',[' dtrace  = '    num2str(abs(space(2)-space(1)))])];
-parameterString = [ parameterString sprintf('%80s',[' trace(1) = '   num2str(space(1))])];
+parameterString = [ parameterString sprintf('%80s',[' dtrace  = '    num2str(abs(space(x2)-space(x1)))])];
+parameterString = [ parameterString sprintf('%80s',[' trace(1) = '   num2str(space(x1))])];
 parameterString = [ parameterString sprintf('%80s',[' trace(end) = ' num2str(space(end))])];
 
 parameterString = [ parameterString sprintf('%80s','  ')];

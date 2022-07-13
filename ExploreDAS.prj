@@ -1,0 +1,65 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="3819334467" file="/Users/markwillis/Documents/GitHub/ExploreDAS/ExploreDAS.prj" location="/Users/markwillis/Documents/GitHub/ExploreDAS" name="ExploreDAS" target="target.mlapps" target-name="Package App">
+    <param.appname>ExploreDAS</param.appname>
+    <param.authnamewatermark>Mark E. Willis</param.authnamewatermark>
+    <param.email>mark_e_willis@hotmail.com</param.email>
+    <param.company>SEG / Halliburton</param.company>
+    <param.icon />
+    <param.icons />
+    <param.summary>This routine creates model data for DAS and geophones, and then allows you to create a migrated image.</param.summary>
+    <param.description>This software was created for the 2022-2023 SEG DISC course by Mark E. Willis. It allows users to create synthetic DAS and geophone data for surface and borehole geometries.</param.description>
+    <param.screenshot />
+    <param.version>1.0.0</param.version>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms />
+    <param.output>${PROJECT_ROOT}</param.output>
+    <param.guid>b70ef257-b9b8-41cc-816c-e1bac2addf64</param.guid>
+    <unset>
+      <param.icon />
+      <param.icons />
+      <param.screenshot />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+      <param.platforms />
+      <param.output />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}/ExploreDAS.m</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>${MATLAB_ROOT}/toolbox/matlab/demos/clown.mat</file>
+    </fileset.depfun>
+    <fileset.resources>
+      <file>${PROJECT_ROOT}/SegyMAT-1.5.1</file>
+      <file>${PROJECT_ROOT}/classes</file>
+      <file>${PROJECT_ROOT}/src</file>
+    </fileset.resources>
+    <fileset.package />
+    <build-deliverables>
+      <file location="/Users/markwillis/Documents/GitHub" name="ExploreDAS" optional="false">/Users/markwillis/Documents/GitHub/ExploreDAS</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>/Applications/MATLAB_R2022a.app</root>
+      <toolboxes />
+    </matlab>
+    <platform>
+      <unix>true</unix>
+      <mac>true</mac>
+      <windows>false</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>12.4</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>maci64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
